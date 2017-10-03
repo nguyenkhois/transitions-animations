@@ -1,0 +1,139 @@
+/* Commons definitions */
+#container{
+    display: flex;
+    flex-direction: column;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial;
+}
+
+/* Definitions for header and navigation */
+header{
+    height: 100px;
+    background: cadetblue;
+    text-align: center;
+}
+nav{
+    background: darkslategray;
+    display: flex;
+}
+nav ul{
+    list-style: none;
+    margin: 5px;
+}
+nav li{
+    float: left;
+    padding: 10px;
+    margin: 0 5px 0 0;
+    background: dodgerblue;
+    border-radius: 6px;
+    text-align: center;
+}
+nav li:hover{
+    background: lightslategray;
+}
+nav li a{
+    color: lightgrey;
+    text-decoration: none;
+}
+nav li a:hover{
+    color: orange;
+    text-decoration: underline;
+}
+
+/* Definitions for main content */
+article{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+article div{
+    margin: 20px;
+    padding: 5px;
+}
+#object1{
+    width: 100px;
+    height: 100px;
+    background: olivedrab;
+    float: left;
+    transition: transform 2s ease;
+}
+#object1:hover{
+    transform: rotate(360deg);
+}
+#object2{
+    width: 50px;
+    height: 50px;
+    background: red;
+    transition: width 2s linear 0s;
+}
+#object2:hover{
+    width: 200px;
+    height: 50px;
+}
+#object2:hover::after{
+    content: "...same speed...";
+}
+#object3{
+    width: 200px;
+    height: 30px;
+    background: brown;
+    transition: height 2s ease 0s;
+}
+#object3:hover{
+    height: 100px;
+}
+#object3:hover::after{
+    content: "...low-fast-low...";
+}
+#object4{
+    width: 200px;
+    height: 30px;
+    background: blueviolet;
+    transition: width 2s ease-in 0s;
+}
+#object4:hover{
+    width: 50px;
+}
+#object4:after{
+    content: "...slow start...";
+}
+#object5{
+    width: 100px;
+    height: 30px;
+    background: hotpink;
+    transition: width 2s ease-out 0s;
+}
+#object5:hover{
+    width: 400px;
+}
+#object5:hover::after{
+    content: '...slow end...';
+}
+#object6{
+    width: 400px;
+    height: 30px;
+    background: tan;
+    transition: height 2s ease-in-out 0s;
+}
+#object6:hover{
+    height: 200px;
+}
+#object6:hover::after{
+    content: "...slow start and slow end...";
+}
+
+
+/* Definitions for footer */
+footer{
+    height: 50px;
+    background: cadetblue;
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+footer:after{
+    content: "Writen by Khoi Le - 2017";
+}

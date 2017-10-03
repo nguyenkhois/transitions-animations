@@ -1,0 +1,40 @@
+/* Transitions */
+/* Definition for div */
+#transex1{
+    width: 100px;
+    height: 50px;
+    margin: 20px;
+    background: cadetblue;
+}
+.transitionexemple:hover {
+    transform: rotate(45deg);
+}
+
+#transex2{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background: olive;
+}
+.transitionexemple2:hover{
+    transform: rotate(45deg); /* Define action for object*/
+    transition: transform 1s ease; /* Define effect to object */
+}
+
+#transex3{
+    width: 20px;
+    height: 20px;
+    background: darkorange;
+    margin: 20px;
+    padding: 10px;
+
+    /* Define effect to object */
+    transition: width 2s linear, height 3s ease 2s;
+}
+#transex3:hover{
+    width: 500px;
+    height: 200px;
+}
+#transex3:hover::after{
+    content: '...reading panel...';
+}
